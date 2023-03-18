@@ -1,6 +1,5 @@
 class StudentTeamsController < ApplicationController
   include AuthorizationHelper
-  include DueDateHelper
 
   autocomplete :user, :name
 
