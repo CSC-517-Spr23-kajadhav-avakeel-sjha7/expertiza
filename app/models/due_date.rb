@@ -1,4 +1,4 @@
-Class to manage Due Dates of Assignments & Signup Sheet Topics
+# Class to manage Due Dates of Assignments & Signup Sheet Topics
 class DueDate < ApplicationRecord
   validates :due_at, presence: true, if: -> { :due_at.to_s.is_a?(DateTime) }
   #  has_paper_trail
@@ -25,9 +25,8 @@ class DueDate < ApplicationRecord
       1
     end
   end
-
+  
   def self.deadline_sort(due_dates)
     due_dates.sort
   end
-  
 end
